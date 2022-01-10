@@ -1,11 +1,9 @@
 const sharp = require('sharp');
 
-const resizeImage = async () => {
-	const resize = await sharp('./images/robo.jpeg')
-		.resize(350, 260)
-		.toFile(__dirname + '/processed_images/resize_robo.jpeg');
-
-	console.info(resize);
+const formatImage = async () => {
+	sharp('./images/fall.jpeg')
+		.toFormat('png', { palette: true })
+		.toFile(__dirname + '/processed_images/format_fall.png');
 };
 
-resizeImage();
+formatImage();
