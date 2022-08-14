@@ -1,0 +1,1 @@
+This is new branch belongs to submodule repo
